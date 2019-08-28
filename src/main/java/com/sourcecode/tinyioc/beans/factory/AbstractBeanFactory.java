@@ -20,6 +20,12 @@ public abstract class AbstractBeanFactory implements BeanFactory {
         return bean;
     }
 
+    /**
+     * 产品贴上标签放仓库
+     * @param name 产品标签
+     * @param beanDefinition 产品
+     * @throws Exception 异常
+     */
     public void registerBeanDefinition(String name, BeanDefinition beanDefinition) throws Exception {
         beanDefinitionMap.put(name,beanDefinition);
         beanDefinitionNames.add(name);
